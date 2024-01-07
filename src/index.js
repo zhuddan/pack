@@ -115,10 +115,10 @@ async function run() {
        */
       const to = path.join(cwd, argv.to);
 
-      if (!(await isDirectory(to))) {
-        logger.error("to 必须是个文件夹");
-        return;
-      }
+      // if (!(await isDirectory(to))) {
+      //   logger.error("to 必须是个文件夹");
+      //   return;
+      // }
 
       if (await isDirectory(from)) {
         logger.info(`复制文件夹[${from}] 复制到 [${to}]`);
