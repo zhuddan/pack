@@ -54,6 +54,8 @@ async function copyFilesRecursively(sourceDir, destinationDir) {
     // 获取源文件夹下的所有文件和子文件夹
     const files = await fs.readdir(sourceDir);
 
+    //
+    await ensureDirectoryExists(destinationDir);
     // 遍历所有文件和子文件夹
     for (const file of files) {
       const sourcePath = path.resolve(sourceDir, file);
